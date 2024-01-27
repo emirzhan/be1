@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Travel Agency</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="#">Travel Agency</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/travelagency">Travel Agency</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-4">
+        <h1>Plan Your Tour</h1>
+        <form id="travelForm">
+            <div class="form-group">
+                <label for="country">Country</label>
+                <select class="form-control" id="country" name="country">
+                    <option value="default">Choose...</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="japan">Japan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City</label>
+                <select class="form-control" id="city" name="city">
+                    <option value="default">Choose...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hotel">Hotel</label>
+                <select class="form-control" id="hotel" name="hotel">
+                    <option value="default">Choose...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalDate">Arrival Date</label>
+                <input type="date" class="form-control" id="arrivalDate" name="arrivalDate">
+            </div>
+
+            <div class="form-group">
+                <label for="departureDate">Departure Date</label>
+                <input type="date" class="form-control" id="departureDate" name="departureDate">
+            </div>
+
+            <div class="form-group">
+                <label for="adults">Number of Adults</label>
+                <input type="number" class="form-control" id="adults" name="adults" min="1" value="1">
+            </div>
+
+            <div class="form-group">
+                <label for="children">Number of Children</label>
+                <input type="number" class="form-control" id="children" name="children" min="0" value="0">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Show Tour</button>
+        </form>
+        
+        <div class="result mt-4" id="result">
+            <h2>Tour Result</h2>
+            <!-- Add these elements at the bottom of your HTML file, beneath the existing tour result elements -->
+            <div id="availability" class="tour-info"></div>
+            <div id="weatherConditions" class="tour-info"></div>
+            <div id="totalCost" class="tour-info"></div>
+        </div>
+    </div>
+    <footer class="">
+        <p>Smagulov Emirzhan - SE 2208</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script> <!-- Update the path based on your project structure -->
+    <script src="/roytes/travelRoutes.js"></script>
+</body>
+</html>

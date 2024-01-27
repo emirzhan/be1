@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Agency</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+    <div class="container mt-5">
+        <form id="travelForm">
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <select class="form-control" id="country" name="country">
+                    <option value="default">Choose...</option>
+                    <option value="usa">USA</option>
+                    <option value="uk">UK</option>
+                    <option value="japan">Japan</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="city">City:</label>
+                <select class="form-control" id="city" name="city">
+                    <option value="default">Choose...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="hotel">Hotel:</label>
+                <select class="form-control" id="hotel" name="hotel">
+                    <option value="default">Choose...</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="arrivalDate">Arrival Date:</label>
+                <input type="date" class="form-control" id="arrivalDate" name="arrivalDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="departureDate">Departure Date:</label>
+                <input type="date" class="form-control" id="departureDate" name="departureDate" required>
+            </div>
+
+            <div class="form-group">
+                <label for="adults">Number of Adults:</label>
+                <input type="number" class="form-control" id="adults" name="adults" min="1" value="1" required>
+            </div>
+
+            <div class="form-group">
+                <label for="children">Number of Children:</label>
+                <input type="number" class="form-control" id="children" name="children" min="0" value="0" required>
+            </div>
+
+            <div class="form-group">
+                <button type="button" class="btn btn-primary" onclick="showTour()">Show Tour</button>
+            </div>
+
+            <!-- Display availability, cost, and book button dynamically -->
+            <div id="tourDetails" style="display: none;">
+                <p id="availability"></p>
+                <p id="tourCost"></p>
+                <button type="button" id="bookButton" class="btn btn-success" onclick="bookTour()" style="display: none;">Book Now</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <script src="/roytes/travelRoutes.js"></script>
+
+</body>
+</html>
